@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button.secondary {
+  background: #2a2a2a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button.secondary:hover {
+  background: #3a3a3a;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.grid {
+  display: inline-grid;
+  gap: 1px;
+  background: #333;
+  padding: 1px;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+  width: 16px;
+  height: 16px;
+  background: #2a2a2a;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cell.alive {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.8);
+}
+
+.cell:hover {
+  opacity: 0.8;
+}
+
+.info {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.generation {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.speed-control input {
+  width: 200px;
+}
+
+.speed-label {
+  color: #aaa;
+  font-size: 0.95rem;
+}
